@@ -1,6 +1,6 @@
 
 
-<h3>Song Form</h3>
+<!-- <h3>Song Form</h3>
 
 <%= form_tag songs_path do %>
   <label>Song Name:</label><br>
@@ -17,4 +17,21 @@
  
   <%= submit_tag "Create Song" %>
   
-<% end %>
+<% end %> -->
+
+<h3>Song Form</h3>
+
+<%= @song.name%><br>
+
+
+<%= form_for @song do |f|%>
+<%= f.label :name%>
+<%= f.text_field :name%>
+<%= f.label :artist_id%>
+<%= f.text_field :artist_id%>
+<%= f.label :genre_id%>
+<%= f.text_field :genre_id%>
+
+<%= f.submit%>
+
+<%end%>

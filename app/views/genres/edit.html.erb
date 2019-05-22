@@ -1,7 +1,7 @@
 
 
 
-<h3>Genre Form</h3>
+<!-- <h3>Genre Form</h3>
 
 <%= form_tag genres_path do %>
   <label>Genre Name:</label><br>
@@ -12,4 +12,18 @@
  
   <%= submit_tag "Update Genre" %>
   
-<% end %>
+<% end %>  -->
+
+
+<h3>Genre Form</h3>
+
+<%= @genre.name%><br>
+
+
+<%= form_for @genre do |f|%>
+<%= f.label :name%>
+<%= f.text_field :name%>
+
+<%= f.submit%>
+
+<%end%>
